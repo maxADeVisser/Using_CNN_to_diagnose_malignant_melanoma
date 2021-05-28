@@ -1,3 +1,6 @@
+#Thanks to Aladdin Persson for providing us with a simple way to distribute our images
+#source: https://github.com/aladdinpersson/Machine-Learning-Collection/blob/master/ML/TensorFlow/Basics/tutorial20-classify-cancer-beginner-project-example/process_data.py
+
 import os
 import shutil
 import random
