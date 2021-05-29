@@ -29,7 +29,7 @@ test_examples = 3820
 img_height = img_width = 224  # Det er en standard når man bruger keras, at sætte billed width og height til 256, men det virker ikke. Så vi satte den til 224 i stedet lmao
 batch_size = 64
 class_weight = {0: 1,
-                1: 12.5}
+                1: 13.82}
 
 #Define model and extra layers
 hub_url = "https://tfhub.dev/google/imagenet/inception_v3/feature_vector/4"
