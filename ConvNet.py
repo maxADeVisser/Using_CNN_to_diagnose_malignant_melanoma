@@ -24,15 +24,15 @@ from tensorflow.keras import regularizers
 
 #Define how many images we have for each class
 train_examples = 14793
-validation_examples = 3830
-test_examples = 3820
+validation_examples = 1915
+test_examples = 1910
 img_height = img_width = 224  # Det er en standard når man bruger keras, at sætte billed width og height til 256, men det virker ikke. Så vi satte den til 224 i stedet lmao
 batch_size = 64
 class_weight = {0: 1,
                 1: 13.82}
 
 #Define model and extra layers
-hub_url = "https://tfhub.dev/google/imagenet/inception_v3/feature_vector/4"
+hub_url = "https://tfhub.dev/google/imagenet/inception_v3/feature_vector/5"
 model = keras.Sequential([
     hub.KerasLayer(hub_url, trainable=True),
 
