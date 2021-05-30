@@ -35,22 +35,8 @@ class_weight = {0: 1,
 hub_url = "https://tfhub.dev/google/imagenet/inception_v3/feature_vector/5"
 model = keras.Sequential([
     hub.KerasLayer(hub_url, trainable=True),
-
-    #layers.Dense(512, kernel_regularizer=regularizers.l2(0.001),
-     #           activation='sigmoid', input_shape=(10000,)),
-
-    #layers.Dropout(0.5),
-
-    #layers.Dense(32, kernel_regularizer=regularizers.l2(l2=0.005),
-     #            activation='sigmoid'),
-
-    #layers.Dropout(0.5),
-
-    layers.Dense(16, kernel_regularizer=regularizers.l2(l2=0.005),
-                 activation='relu'),
-
+    layers.Dense(16, kernel_regularizer=regularizers.l2(l2=0.005), activation='relu'),
     layers.Dropout(0.5),
-
     layers.Dense(1, activation="sigmoid"),
 ])
 
@@ -122,10 +108,6 @@ model.compile(
     metrics=METRICS,
 )
 
-#Til tensorboard:
-#log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-#tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
-
 model.fit(
     train_gen,
     epochs=10,
@@ -135,8 +117,7 @@ model.fit(
     validation_steps=validation_examples // batch_size,
     class_weight=class_weight
     #callbacks=[tensorboard_callback]
-    # Næste linje kode er hvordan man loader en gemt model
-    # callbacks=[keras.callbacks.ModelCheckpoint("isic_model")],
+    # callbacks=[keras.callbacks.ModelCheckpoint("isic_model")], # How to load a saved model
 )
 
 
@@ -144,7 +125,6 @@ model.fit(
 def plot_roc(labels, data):
     predictions = model.predict(data)
     fp, tp, _ = roc_curve(labels, predictions) #the actual labels and the predictions for them
-
     plt.plot(100 * fp, 100 * tp)
     plt.xlabel("False positives [%]")
     plt.ylabel("True positives [%]")
@@ -164,5 +144,5 @@ for _, y in test_gen:
 
 model.evaluate(validation_gen, verbose=1)
 model.evaluate(test_gen, verbose=1)
-#plot_roc(test_labels, test_gen)
+plot_roc(test_labels, test_gen)
 model.save("second_project/Savedmodel_InceptionFV5_24.1")
