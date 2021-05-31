@@ -2,4 +2,4 @@
 
 #### *How can a convolutional neural network be used to diagnose malignant melanoma?*
 
-##### **by Simon Hindsgaul, Max de Visser, William Dyrnesli and Sebastian Rohr**
+##### **by Simon Hindsgaul :medal_military: Max de Visser :medal_military: William Dyrnesli :medal_military: Sebastian Rohr** :medal_military:
