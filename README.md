@@ -7,6 +7,8 @@
 # Setup
 To run a training on our convolutional neural network you will need to download a number of things. 
 The most crucial thing required is a computer with a GPU.
+We will also preface by saying that this is a rather tedious process that requires multiple software installations.
+
 We are using python 3.8. The following downloads and versions of the required programs are listed in accordance with this.
 If you are using a newer or older version of python you can use this link: https://www.tensorflow.org/install/source#gpu to check the compatibility of your version of python.
 
