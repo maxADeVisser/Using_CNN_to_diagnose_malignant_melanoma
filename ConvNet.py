@@ -18,18 +18,21 @@ from tensorflow.keras import regularizers
 #tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 #Define how many images we have in each folder created by process_data.py
+# NOTE: change these values according to how many you have of each type
 train_examples = 14793
 validation_examples = 1915
 test_examples = 1910
+
 img_height = img_width = 224 #InceptionV3 feature vector 5 takes images in this format as input. This might change depending on what transfer learning model is used.
-batch_size = 64 #How many images are in each batch? Increasing
-class_weight = {0: 1, 1: 13.82} #Define the weight of our classes. 0 = benign, 1 = malignant
+batch_size = 64 # How many images are in each batch
+class_weight = {0: 1, 1: 13.82} # Define the weight of our classes. 0 = benign, 1 = malignant
 
-#Define model and extra layers
-hub_url = "https://tfhub.dev/google/imagenet/inception_v3/feature_vector/4" #The link to the trasfer learning model we use
-model = keras.Sequential([ #Set model to sequencial so we can define layers one by one.
-    hub.KerasLayer(hub_url, trainable=True), #Set trainable to true, so the transfer learning model trains the entire network on our data.
+# Define model and extra layers
+hub_url = "https://tfhub.dev/google/imagenet/inception_v3/feature_vector/4" # The link to the trasfer learning model we use
 
+model = keras.Sequential([  # Set model to sequential so we can define layers one by one
+    hub.KerasLayer(hub_url, trainable=True), # Set trainable to true, so the transfer learning model trains the entire network on our data.
+    
     #Adding our own layers onto the transfer learning model
     layers.Dense(16, kernel_regularizer=regularizers.l2(l2=0.005), activation='relu'),
 
@@ -38,7 +41,7 @@ model = keras.Sequential([ #Set model to sequencial so we can define layers one 
     layers.Dense(1, activation="sigmoid"),
 ])
 
-#Datagenerators for train, validation, and test data
+# Datagenerators for train, validation, and test data
 
 #Data augmentation for training data
 train_datagen = ImageDataGenerator(
