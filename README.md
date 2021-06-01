@@ -33,6 +33,6 @@ Furthermore, you need to download the file called 'train.csv'. The path on the w
 
 Once the images and the .csv file is downloaded you are ready to run the "process_data.py" file, which separates the images into training, validation, and test folders. 
 
-Congratulations! You are ready to train your first ConvNet on your computer using the "train_data.py" file. You are welcome to modify and redistribute the program :) 
+Congratulations! You are ready to train your first ConvNet on your computer using the "ConvNet.py" file. You are welcome to modify and redistribute the program :) 
 
 
