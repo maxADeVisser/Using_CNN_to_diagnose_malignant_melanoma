@@ -21,10 +21,14 @@ The programs you will need to download to enable TensorFlow 2.4.1 to run on your
 The next thing you will need is the command prompt known as Anaconda prompt.
 - Anaconda prompt: https://docs.anaconda.com/anaconda/install/
 
-After you have finished installing the anaconda prompt, you simply need to go to the requirements.txt in our repository and follow the instructions there. Once you are done following those instructions and you have your virtual environment with TensorFlow installed, you have to download the data for the ConvNet.
+After you have finished installing the anaconda prompt, you simply need to go to the requirements.txt file and follow the instructions there. Once you are done and you have your virtual environment with TensorFlow installed, you have to download the data for the ConvNet.
 
 The data for the ConvNet can be found through this link: https://www.kaggle.com/c/siim-isic-melanoma-classification/data?select=jpeg
 
-The data is from a kaggle competition called "SIIM-ISIC Melanoma Classification". You will only need to download the file with jpeg images, as that is the only data our ConvNet takes as input. Once the images are downloaded you are ready to run the "process_data.py" file, which separates the images into training, validatio, and test folders. Congratulations! You are ready to train your first ConvNet on your computer using the "train_data.py" file. You are welcome to modify and redistribute the program :) 
+The data is from a kaggle competition called "SIIM-ISIC Melanoma Classification". You will only need to download the folder called 'train' under jpeg images, as that is the only data our ConvNet takes as input. The filepath on kaggle website is Data explore > jpeg > train. 
+
+Once the images are downloaded you are ready to run the "process_data.py" file, which separates the images into training, validation, and test folders. 
+
+Congratulations! You are ready to train your first ConvNet on your computer using the "train_data.py" file. You are welcome to modify and redistribute the program :) 
 
 
