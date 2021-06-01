@@ -8,7 +8,7 @@ import random
 seed = 1
 random.seed(seed)
 
-directory = "PASTE_YOUR_DIRECTORY_PATH_HERE" 
+directory = "PASTE_DIRECTORY_PATH_TO_DATASET_HERE" 
 train = "data/train/"
 test = "data/test/"
 validation = "data/validation/"
@@ -23,6 +23,7 @@ os.makedirs(validation + "malignant/")
 
 test_examples = train_examples = validation_examples = 0
 
+# 
 for line in open("ISIC/labels.csv").readlines()[1:]:
     split_line = line.split(",")
     img_file = split_line[0]
