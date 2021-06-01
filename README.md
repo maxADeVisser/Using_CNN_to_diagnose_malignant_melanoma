@@ -12,10 +12,10 @@ We will also preface by saying that this is a rather tedious process that requir
 We are using python 3.8. The following downloads and versions of the required programs are listed in accordance with this.
 If you are using a newer or older version of python you can use this link: https://www.tensorflow.org/install/source#gpu to check the compatibility of your version of python.
 
+NOTE: make sure your graphics cards' drivers are up to date. 
 The programs you will need to download to enable TensorFlow 2.4.1 to run on your GPU are:
-1. Make sure your graphics cards' drivers are up to date.
-2. CUDA toolkit 11.0 - https://developer.nvidia.com/cuda-toolkit-archive
-3. CuDNN version 8.0 - https://developer.nvidia.com/cudnn (getting CuDNN requires you to become a member of the NVIDIA developer program) 
+1. CUDA toolkit 11.0 - https://developer.nvidia.com/cuda-toolkit-archive
+1. CuDNN version 8.0 - https://developer.nvidia.com/cudnn (getting CuDNN requires you to become a member of the NVIDIA developer program) 
 
 The next thing you will need is the command prompt known as Anaconda prompt.
 - Anaconda prompt: https://docs.anaconda.com/anaconda/install/
