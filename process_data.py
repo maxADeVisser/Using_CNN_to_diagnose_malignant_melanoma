@@ -7,11 +7,13 @@ import random
 
 seed = 1
 random.seed(seed)
-directory = "ISIC/images/"
+
+directory = "PASTE_YOUR_DIRECTORY_PATH_HERE" 
 train = "data/train/"
 test = "data/test/"
 validation = "data/validation/"
 
+# The following commands creates the folders
 os.makedirs(train + "benign/")
 os.makedirs(train + "malignant/")
 os.makedirs(test + "benign/")
