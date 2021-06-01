@@ -27,7 +27,9 @@ After you have finished installing the anaconda prompt, you simply need to go to
 
 The data for the ConvNet can be found through this link: https://www.kaggle.com/c/siim-isic-melanoma-classification/data?select=jpeg
 
-The data is from a kaggle competition called "SIIM-ISIC Melanoma Classification". You will need to download the folder called 'train' under jpeg images, as that is the only data our ConvNet takes as input. The filepath for the train folder on kaggle website is: Data explore > jpeg > train. Furthermore, you need to download the file called 'train.csv'. The path on the website is Data explore > train.csv. For convenience, place the .csv file in the same directory as the dataset.
+The data is from a kaggle competition called "SIIM-ISIC Melanoma Classification". You will need to download the folder called 'train' under jpeg images, as that is the only data our ConvNet takes as input. The filepath for the train folder on kaggle website is: Data explore > jpeg > train. 
+
+Furthermore, you need to download the file called 'train.csv'. The path on the website is Data explore > train.csv. For convenience, place the .csv file in the same directory as the dataset.
 
 Once the images and the .csv file is downloaded you are ready to run the "process_data.py" file, which separates the images into training, validation, and test folders. 
 
