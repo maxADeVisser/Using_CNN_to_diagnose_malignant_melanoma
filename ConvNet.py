@@ -63,8 +63,8 @@ train_gen = train_datagen.flow_from_directory(
     batch_size=batch_size, #Batch size for training data is equal to the batch size we defined in the beginning.
     color_mode="rgb", #This is the default setting, but we defined it to make it clear.
     class_mode="binary", #Define that we only have 2 classes
-    shuffle=True, #mangler kommentar
-    seed=123, #mangler kommentar
+    shuffle=True, 
+    seed=123, 
 )
 
 #Load validation data
