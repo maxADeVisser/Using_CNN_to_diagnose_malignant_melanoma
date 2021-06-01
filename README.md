@@ -5,6 +5,8 @@
 ##### **by Simon Hindsgaul :medal_military: Max de Visser :medal_military: William Dyrnesli :medal_military: Sebastian Rohr** :medal_military:
 
 # Setup
+NOTE: this process is only fitted to windows 64 operation systems.
+
 To run a training on our convolutional neural network you will need to download a number of things. 
 The most crucial thing required is a computer with a GPU.
 We will also preface by saying that this is a rather tedious process that requires multiple software installations.
