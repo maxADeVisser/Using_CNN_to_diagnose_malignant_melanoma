@@ -8,12 +8,13 @@ import random
 seed = 1
 random.seed(seed)
 
-directory = "PASTE_DIRECTORY_PATH_TO_DATASET_HERE" 
+
+directory = "PASTE_DIRECTORY_PATH_TO_DATASET_HERE" + "/" # Modify directory path 
 train = "data/train/"
 test = "data/test/"
 validation = "data/validation/"
 
-# The following commands creates the folders
+# The following commands creates folders for the different folders
 os.makedirs(train + "benign/")
 os.makedirs(train + "malignant/")
 os.makedirs(test + "benign/")
@@ -23,8 +24,8 @@ os.makedirs(validation + "malignant/")
 
 test_examples = train_examples = validation_examples = 0
 
-# 
-for line in open("ISIC/labels.csv").readlines()[1:]:
+# distributing data
+for line in open("PASTE_PATH_TO_.CSV_FILE_HERE").readlines()[1:]: # modify .csv path
     split_line = line.split(",")
     img_file = split_line[0]
     benign_malign = split_line[1]
@@ -43,18 +44,20 @@ for line in open("ISIC/labels.csv").readlines()[1:]:
         location = test
         test_examples += 1
 
-    if int(float(benign_malign)) == 0:
+    # distributes labelled samples into malignant or benign folders    
+    if int(float(benign_malign)) == 0: # benign samples
         shutil.copy(
-            "ISIC/images/" + img_file + ".jpg",
+            directory + img_file + ".jpg",
             location + "benign/" + img_file + ".jpg",
         )
 
-    elif int(float(benign_malign)) == 1:
+    elif int(float(benign_malign)) == 1: # malignant samples 
         shutil.copy(
-            "ISIC/images/" + img_file + ".jpg",
+            directory + img_file + ".jpg",
             location + "malignant/" + img_file + ".jpg",
         )
 
+# prints number of each sample type
 print(f"Number of training examples {train_examples}")
 print(f"Number of test examples {test_examples}")
 print(f"Number of validation examples {validation_examples}")
